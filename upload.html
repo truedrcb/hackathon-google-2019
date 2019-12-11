@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
@@ -15,6 +16,10 @@
         function product() {
             console.log(document.getElementById('my_iframe'));
             console.log(document.getElementById('my_iframe').contentWindow.document.body.innerHTML);
+
+            $.get({
+                url: "https://us-central1-hackathon-sap19-wal-1006.cloudfunctions.net/checkOut?item_id=APPLE"
+            });
         }
     </script>
     <main class="jumbotron">

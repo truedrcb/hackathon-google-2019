@@ -12,6 +12,10 @@
             document.getElementById('my_form').target = 'my_iframe'; //'my_iframe' is the name of the iframe
             document.getElementById('my_form').submit();
         }
+        function product() {
+            console.log(document.getElementById('my_iframe'));
+            console.log(document.getElementById('my_iframe').contentWindow.document.body.innerHTML);
+        }
     </script>
     <main class="jumbotron">
         <h1>Micro Kiosk</h1>
@@ -22,7 +26,8 @@
             <div id="main">
                 <input name="fileToUpload" id="fileToUpload2" size="27" type="file" class="btn btn-info"/>
                 <input type="button" class="btn btn-primary" name="action" value="Upload" onclick="redirect()" />
-                <iframe style="border: solid black 1px; margin: 1ex;" id='my_iframe' name='my_iframe' src="">
+                <iframe onLoad="product()" 
+                    style="border: solid black 1px; margin: 1ex;" id='my_iframe' name='my_iframe' src="">
                 </iframe>
             </div>
         </form>
